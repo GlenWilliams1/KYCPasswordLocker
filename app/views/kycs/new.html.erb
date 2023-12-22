@@ -1,0 +1,18 @@
+<!-- app/views/kycs/new.html.erb -->
+<h1>Add KYC Information</h1>
+
+<%= form_with(model: @kyc, url: kycs_path, method: :post) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :document %>
+    <%= form.text_field :document %>
+  </div>
+
+  <div>
+    <%= form.submit "Submit" %>
+  </div>
+<% end %>

@@ -1,0 +1,12 @@
+<!-- app/views/kycs/index.html.erb -->
+<h1>Your KYC Records</h1>
+
+<% if @kycs.any? %>
+  <ul>
+    <% @kycs.each do |kyc| %>
+      <li><%= kyc.name %> - <%= kyc.document %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No KYC records available.</p>
+<% end %>
